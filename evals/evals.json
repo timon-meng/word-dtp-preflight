@@ -1,0 +1,23 @@
+{
+  "skill_name": "word-dtp-preflight",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我对这个 Word 文件做完整的预检。文件在 /sessions/hopeful-beautiful-meitner/word-dtp-preflight/evals/test_target.docx",
+      "expected_output": "应运行 R03-R20 所有分析检查，输出中英文双语报告，正确识别：1 处多余硬回车、1 处隐藏文字、多个引用字体未安装（在 Linux 环境属正常）",
+      "files": ["evals/test_target.docx"]
+    },
+    {
+      "id": 2,
+      "prompt": "我有一个英文源文件和中文译文，请比对这两个文件的编号列表和数字。源文件：/sessions/hopeful-beautiful-meitner/word-dtp-preflight/evals/test_source.docx，译文：/sessions/hopeful-beautiful-meitner/word-dtp-preflight/evals/test_target.docx",
+      "expected_output": "应运行 R21（编号比对）和 R29（数字比对），R21 应发现 1 个缺失列表项（Item four），R29 应显示数字一致",
+      "files": ["evals/test_source.docx", "evals/test_target.docx"]
+    },
+    {
+      "id": 3,
+      "prompt": "请帮我把这个文件里的隐藏文字全部取消隐藏，文件路径：/sessions/hopeful-beautiful-meitner/word-dtp-preflight/evals/test_target.docx，输出保存在同目录",
+      "expected_output": "应执行 R25 写操作，输出 test_target_unhidden.docx，报告取消隐藏了 1 处文字，并提供文件下载链接",
+      "files": ["evals/test_target.docx"]
+    }
+  ]
+}
