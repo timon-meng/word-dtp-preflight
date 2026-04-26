@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+evals/test_*.docx
+evals/test_*.xlsx
+*.skill
